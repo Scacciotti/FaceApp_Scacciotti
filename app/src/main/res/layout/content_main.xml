@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.nicka.myapplication.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <FrameLayout
+        android:layout_width="855dp"
+        android:layout_height="480dp"
+        android:id="@+id/Board"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true">
+
+        <com.example.nicka.myapplication.Face
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:background="#ffEAD6B3"
+            android:id="@+id/faceSurfView"
+            android:layout_gravity="center_horizontal|top" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:id="@+id/BottomBar"
+        android:layout_gravity="right|bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="504dp"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Red Value:"
+                    android:id="@+id/redText"
+                    android:layout_gravity="left|top"
+                    android:textSize="25dp"
+                    android:paddingTop="10dp" />
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:id="@+id/redVal"
+                    android:textSize="25dp"
+                    android:paddingLeft="30dp"
+                    android:layout_gravity="bottom"
+                    android:text="0" />
+
+                <SeekBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/redBar"
+                    android:layout_weight="1.07"
+                    android:paddingTop="20dp"
+                    android:indeterminate="false"
+                    android:max="255" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Green Value:"
+                    android:id="@+id/greenText"
+                    android:layout_gravity="left|top"
+                    android:textSize="25dp"
+                    android:paddingTop="10dp" />
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:id="@+id/greenVal"
+                    android:textSize="25dp"
+                    android:paddingLeft="5dp"
+                    android:text="0" />
+
+                <SeekBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/greenBar"
+                    android:layout_weight="1.07"
+                    android:paddingTop="20dp"
+                    android:indeterminate="false"
+                    android:max="255" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Blue Value:"
+                    android:id="@+id/blueText"
+                    android:layout_gravity="left|top"
+                    android:textSize="25dp"
+                    android:paddingTop="10dp" />
+
+                <TextView
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:id="@+id/blueVal"
+                    android:textSize="25dp"
+                    android:paddingLeft="22dp"
+                    android:text="0" />
+
+                <SeekBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/blueBar"
+                    android:layout_weight="1.07"
+                    android:paddingTop="20dp"
+                    android:indeterminate="false"
+                    android:max="255" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="375dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right">
+
+            <RadioGroup
+                android:id="@+id/radioSelection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hair"
+                    android:id="@+id/hairRadio"
+                    android:checked="true" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Eyes"
+                    android:id="@+id/eyesRadio"
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Skin"
+                    android:id="@+id/skinRadio"
+                    android:checked="false" />
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="154dp"
+                android:layout_height="wrap_content">
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="37dp"
+                    android:id="@+id/hairSpinner"
+                    android:spinnerMode="dropdown" />
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="37dp"
+                    android:id="@+id/eyeSpinner" />
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="37dp"
+                    android:id="@+id/noseSpinner" />
+            </LinearLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/randomButton"
+                android:text="Random Button" />
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</RelativeLayout>
